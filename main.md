@@ -3,7 +3,12 @@
 general remarks:
 
 - remember learners of aims, keep big picture in sight
+	- understand the data science landscape (to see what infrastructure / staff is needed)
+	- apply data analytics to see how it works, what can be done, how it could be useful
+
 - show were we at, summarize
+- hard to justify big stacks with mickey mouse examples
+- the course is acompanied with R
 
 
 ## about me
@@ -14,7 +19,7 @@ general remarks:
 
 - all course members should introduce themselves
 
-## background check slide
+## Background Check 
 
 interactive bullet chart:
 
@@ -23,7 +28,7 @@ interactive bullet chart:
 - database
 
 
-## inspiration
+## Inspiration
 
 - what data analytics can do
 	- 1 million lines of code
@@ -93,8 +98,10 @@ interactive bullet chart:
 - console 
 - short cut cmd+enter: run selection
 - short cut ctrl+1, ctrl+2: switch windows
+- short cut command+D: multiple cursors @instances
 - file explorer
 - plot window
+- .Rproj
 
 ## Basic R Objects
 
@@ -109,13 +116,56 @@ interactive bullet chart:
 - **{}**: function or loop body
 - **()**: function parameters
 
+## Basic functions
+
+- ls()
+- rm()
+- c()
+- matrix()
+- data.frame()
+- list()
+- head()
+- tail()
+- str()
+- function()
+- lapply()
+- data()
+
+
 ## Getting help
 
 - ?function name
 - Stack overflow Questions tagged R
 
 
-## Some tasks /w empty cars
+## Working on a dataset (mtcars)
+
+1. get an idea about size and structure
+	- class
+	- structure
+	- head / tail
+
+2. get an idea about distribution of variables
+	- summarize
+	- visualize
+	- test
+
+3. inferential statistics / modelling
+	- variance is information
+	- model choice
+
+
+## Summary I
+
+- a scripting language is a good start
+- understanding a language helps to remember syntax
+- many tasks can be solved w/o database, larger stack
+
+
+
+
+
+
 
 
 
