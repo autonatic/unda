@@ -205,7 +205,7 @@ examples: German socio-economic panel, studies with follow-ups
 - put several objects in a list
 
 
-## Summary
+## Summary II
 
 
 - different data types ask for different methods
@@ -215,6 +215,7 @@ examples: German socio-economic panel, studies with follow-ups
 
 - What type of data do our research questions need? 
 - What type of data do our processes generate?
+
 
 
 ## Collecting Data
@@ -230,52 +231,14 @@ examples: German socio-economic panel, studies with follow-ups
 - data vendors (bloomberg, datastream, macrobond, quandl)
 
 
-
-
-
-
-## Tools
-
-- database
-	- PostgreSQL
-	- Oracle
-	- Microsoft SQL server
-	- Elastic 
-	- Cassandra
-- programming language 
-	- python 
-	- R
-	- go 
-	- scala
-	- julia
-- frameworks
-	- hadoop
-	- spark 
-
-
-
-
-## Types of data
-
-- time series (aggregated), append data structure
-- micro data 
-- cross section
-- longitudinal
-
-## DGPs
+## Data Generating Processes
 
 - scraping / mining 
 - tracking
 - logging
 - surveys
 
-
-## Processing 
-
-- visualize
-- aggregate
-- archive
-
+## Manage and Archive Data
 
 ## Methodology
 
