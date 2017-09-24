@@ -98,6 +98,7 @@ interactive bullet chart:
 - console 
 - short cut cmd+enter: run selection
 - short cut ctrl+1, ctrl+2: switch windows
+- short cut ctrl+L: clear console screen
 - short cut command+D: multiple cursors @instances
 - file explorer
 - plot window
@@ -138,7 +139,7 @@ interactive bullet chart:
 - Stack overflow Questions tagged R
 
 
-## Working on a dataset (mtcars)
+## Task I Working on a dataset (mtcars)
 
 1. get an idea about size and structure
 	- class
@@ -155,6 +156,9 @@ interactive bullet chart:
 	- model choice
 
 
+# Introduction
+
+
 ## Summary I
 
 - a scripting language is a good start
@@ -163,57 +167,70 @@ interactive bullet chart:
 
 
 
+## Types of datasets: time series
+
+ts1 <- ts(rnorm(300), start = c(1995,1), frequency = 12)
+ts2 <- ts(rnorm(100), start = c(1995,1), frequency = 4)
+
+examples: monthly revenues over time, stocks, log files
+
+
+## Types of datasets: cross sectional data
+
+data(mtcars)
 
 
 
+## Types of datasets: panel data (longitudinal and cross sectional)
+
+
+examples: German socio-economic panel, studies with follow-ups
 
 
 
+## How to represent different types of datasets? 
+
+**Data structures**
+
+- vectors: one dimensional
+- key-value-pairs
+- rectangular
+- nested
 
 
+## Task II
+
+- try functions like length(), nrow() on different objects
+- explore data types, try functions like sum(), nchar() on different vectors
+- put several objects in a list
 
 
+## Summary
 
 
+- different data types ask for different methods
+- different datasets need different representation
 
+**Questions**:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- What type of data do our research questions need? 
+- What type of data do our processes generate?
 
 
 ## Collecting Data
 
-- sources
-	- devices (IoT)
-	- social media
-	- websites
-	- Google Analytics
-	- Google Adwords
-	- statistical offices
-	- data vendors (bloomberg, datastream, macrobond, quandl)
+**sources**:
+- simulation
+- devices (IoT)
+- websites
+- Google Analytics
+- Google Adwords
+- social media
+- statistical offices, studies
+- data vendors (bloomberg, datastream, macrobond, quandl)
 
 
 
-
-
-## Intro - trends
-
-- mobile
-- web
-- 
 
 
 
