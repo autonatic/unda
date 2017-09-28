@@ -166,6 +166,8 @@ interactive bullet chart:
 - many tasks can be solved w/o database, larger stack
 
 
+# How About Real Data ?
+
 
 ## Types of datasets: time series
 
@@ -217,40 +219,119 @@ examples: German socio-economic panel, studies with follow-ups
 - What type of data do our processes generate?
 
 
-
-## Collecting Data
-
-**sources**:
-- simulation
-- devices (IoT)
-- websites
-- Google Analytics
-- Google Adwords
-- social media
-- statistical offices, studies
-- data vendors (bloomberg, datastream, macrobond, quandl)
-
-
 ## Data Generating Processes
 
-- scraping / mining 
-- tracking
 - logging
-- surveys
+- tracking
+- surveys / observation
+- scraping / mining 
 
-## Manage and Archive Data
 
-## Methodology
+## Collecting Data (from different sources)
 
-- descriptive statistics
-- inferential statistics
-	- cluster analysis
-	- factor analysis
-	- principal component
-	- linear regression
+- simulate
+- record: devices (IoT)
+- track: websites, social media, Google Analytics
+- campaign: Google Adwords
+- read in
+	- statistical offices, studies
+	- data vendors (bloomberg, datastream, macrobond, quandl)
+
+
+
+## Manage and Archive Data: file formats
+
+- standard text based formats
+	- .csv
+	- .xml 
+	- .xlsx
+	- .json 
+
+- binaries 
+	- .RData
+	- .xls
+	- .dta
+	- .dat
+	- .feather
+	- ...
+
+## Manage and Archive Data: databases
+
+- relational
+	- PostgreSQL
+	- Oracle
+	- Microsoft SQL Server
+	- MySQL
+
+- non-relational
+	- Elastic
+	- mongoDB
+	- cassandra
+
+
+## Summary III
+
+
+
+# Output
+
+## Visualize 
+
+- interactive
+	- data driven documents (d3)
+	- shiny
+	- dash
+	- highcharts
+	- dygraphs
+	- ...
+
+- print
+
+=> web browser 
+
+
+## Report
+
+- knitr (LaTeX + R code snippets)
+- rmarkdown (markdown + R code snippets)
+- reporteR (edit powerpoint from an R script)
+
+
+## Summary IV
+
+
+# Beyond Descriptive Statistics
+
+
+# Advanced Statistical Methods
+
+
+- cluster analysis
+- factor analysis
+- principal component
+- regression
+	- linear
 	- probit / logit
+	- multinomial 
 - machine learning
 	- supervised 
 	- unsupervised
+- seasonal adjustment
+
+
+## Overall Summary
+
+
+# Links
+http://101.datascience.community/2015/10/24/analytics-vs-data-science/
+
+packs:
+libcurl4-openssl-dev
+latex package framed
+openssl-devel
+
+
+
+
 
 

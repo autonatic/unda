@@ -1,0 +1,173 @@
+---
+title: "Understanding Data Analytics"
+subtitle: "develop a strategy, apply and scale"
+author: "Matthias Bannert"
+date: "October 2017"
+output: ioslides_presentation
+widescreen: true
+smaller: true
+runtime: shiny
+---
+
+## :~$ whoami 
+
+**Matthias Bannert**
+
+- current occupation: data scientist / software developer @ETH Zurich
+- occasional consultant 
+- studied economics @UniKN, PhD @ETHZ: partly economics, mostly methodology + stats
+- CTO of Swiss startup *fanpictor* from 2012-2014
+- open source software projects: timeseriesdb, tstools, dropR, RAdwords
+
+<div align="right">
+<img src="images/mba_profile.png" alt="matthias bannert" style="width: 180px;"/></div>
+
+
+## About this course
+
+```
+# listen - forget
+# see - remember
+# do - understand
+```
+
+
+## Overview
+
+- Day 1: Organize
+	- Introduction
+	- Data Generating Processes
+	- Types of Data
+	- Manage and Archive
+- Day 2: Process and Communicate
+	- Visualization
+	- Methodology
+
+## Background Poll
+
+<!-- ```{r,echo=FALSE}
+library(grid)
+library(shiny)
+source("bullet.R")
+
+fluidPage(sidebarLayout(sidebarPanel(
+  numericInput("members", "Number of participants", 14),
+  numericInput("prog", "Programming", 14),  
+  numericInput("data", "Work With Data", 14),
+  numericInput("rstats", "R Statistical Langauge", 14)
+  ),
+  mainPanel(
+    renderPlot({
+      techavg <- mean(c(input$prof,
+                        input$data,
+                        input$stats) / input$members)*100
+  df1 <- data.frame(units = c("Prog(%)","data(%)","R(%)"),
+                    low = c(25,25,25),
+                    mean = c(50,50,50),
+                    high = c(100,100,100),
+                    target = c(techavg,techavg,techavg),
+                    value = c(100*(input$prog/input$members),
+                              100*(input$data/input$members),
+                              100*(input$rstats/input$members)
+                              )
+                    )
+
+  g <- gridBulletGraphH(df1,bcol = c("#999999","#CCCCCC","#E1E1E1"),
+                   vcol = "#333333",font = 20)
+
+  g + title(paste("Usage of Technologies Among Participants", sep=" "))
+
+})  
+
+
+    )
+  ))
+
+```
+ -->
+
+## Inspiration: Illustrate
+
+<img src="images/mobile_evolution.png" width="650" alt="mobile evolution">
+
+## Inspiration: Relation
+
+<img src="images/million_lines.png" width="650" alt="million lines">
+
+## Inspiration: Choropleth
+
+<img src="images/five_percent.png" width="650" alt="five percent">
+
+
+## Inspiration: Draw R
+
+<img src="images/obama.png" width="650" alt="obama years">
+
+[You Draw It! (NY Times)](https://www.nytimes.com/interactive/2017/01/15/us/politics/you-draw-obama-legacy.html?mcubz=0)
+
+## Inspiration: Process Data
+
+- download automatically
+- read spreadsheet
+- process 
+- visualize
+
+## Inspiration: Dynamic Reporting / Presentations
+
+- create report
+- dynamic figures & tables
+- html, pdf, docx 
+
+
+## Data Analytics Toolbox
+
+<img src="images/python.png" width="200">
+<img src="images/git.png">
+<img src="images/github.png">
+<img src="images/azure.png" width="130">
+<img src="images/julia.png" width="130">
+<img src="images/mongodb.png" width="130">
+<img src="images/docker.png">
+<img src="images/rstats.png" height="80">
+<img src="images/rstudio.png" width="130">
+<img src="images/spark.png" width="130">
+<img src="images/cassandra.png" width="140">
+<img src="images/highcharts.png" width="140">
+<img src="images/hadoop.png" width="130">
+<img src="images/tableau.png" width="130">
+<img src="images/pandas.png" width="130">
+<img src="images/aws.png">
+<img src="images/d3.png" height="80">
+<img src="images/postgresql.png" width="150">
+
+
+## Getting Started
+
+```
+"Premature optimization is the root of all evil."
+
+```
+<div align="right">Donald Knuth</div>
+
+## But ...
+
+<img src="images/busy.png">
+
+
+## The R Ecosystem
+
+- R Interpreter
+- R Studio IDE / R Studio Server
+- CRAN Repository /w 10K+ packages
+- Community: [stackoverflow](https://stackoverflow.com/questions/tagged/r), Mailinglist, ...
+
+
+
+
+
+
+
+
+
+
+
