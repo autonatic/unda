@@ -1,6 +1,6 @@
 ---
 title: "Understanding Data Analytics"
-subtitle: "develop a strategy, apply and scale"
+subtitle: "plan, apply and scale"
 author: "Matthias Bannert"
 date: "October 2017"
 output: ioslides_presentation
@@ -25,11 +25,18 @@ runtime: shiny
 
 ## About this course
 
+**Approach**
 ```
 # listen - forget
 # see - remember
 # do - understand
 ```
+
+**Goals**
+
+- plan
+- apply
+- scale
 
 
 ## Overview
@@ -140,6 +147,7 @@ fluidPage(sidebarLayout(sidebarPanel(
 <img src="images/d3.png" height="80">
 <img src="images/postgresql.png" width="150">
 
+<p style="font-size: 10px;">Quelle: all Logos taken from their respective companies' website.</p>
 
 ## Getting Started
 
@@ -154,15 +162,182 @@ fluidPage(sidebarLayout(sidebarPanel(
 <img src="images/busy.png">
 
 
+## The R Language for Statisticsl Computing
+
+- First appeared in 1993 
+- designed by Ihaka and Gentleman
+- Last Stable Release: 3.4.1
+
+**Why R?**
+
+- interpreted language
+- interfaces to many compiled languages
+- easy to learn
+- open source, license cost free
+- backed by Microsoft
+- one-of-a-kind ecosystem, wide range of packages
+
+
+
+
 ## The R Ecosystem
 
 - R Interpreter
-- R Studio IDE / R Studio Server
-- CRAN Repository /w 10K+ packages
+- [CRAN Repository /w 10K+ packages](https://cran.r-project.org/)
+- [CRAN Task Views](https://cran.r-project.org/web/views/)
 - Community: [stackoverflow](https://stackoverflow.com/questions/tagged/r), Mailinglist, ...
+- R Studio IDE / R Studio Server
+
+
+## The R Studio IDE
+
+- Switch to LTR Layout
+- Console vs. Scripting window 
+- comments
+- short cut cmd+enter: run selection
+- short cut ctrl+1, ctrl+2: switch windows
+- short cut ctrl+L: clear console screen
+- short cut command+D: multiple cursors @instances
+- file explorer
+- plot window
+- .Rproj
+
+
+## Basic R Objects
+
+- vector
+- matrix
+- data.frame
+- list
+
+## Brackets and braces 
+
+- **[row,col]**: Index
+- **{}**: function or loop body
+- **()**: function parameters
+
+## Basic functions I
+
+- ls()
+- rm()
+- c()
+- matrix()
+- data.frame()
+- list()
+
+**getting help**: ?function name
+
+
+## Basic functions II
+
+- head()
+- tail()
+- str()
+- function()
+- lapply()
+- data()
+
+**getting help**: ?function name
+
+
+## Before you start ...  
+
+<img src="images/knigge.png">
+
+
+## Good habits: Snakes ... 
+
+- i_am_a_snake
+
+<div align="right">
+<img src="images/snake.png" style="width: 400px;"/></div>
+
+
+## and camels
+
+- jeSuisUnCamel
+
+<div align="right">
+<img src="images/camel.gif" style="width: 400px;"/></div>
+
+
+## Task: Working on a built-in dataset
+
+1. How many observations does the dataset mtcars have?
+2. What's the miles-per-gallon average, median?
+3. Which is the most ecological car? 
+4. Which is the most ecological car by cylinders?
+5. How is mpg distributed?
+6. Why does solving analytics exercises through programming make sense?
+
+
+## Summary I 
+
+- scripting language is good start
+- understanding a language helps to remember syntax
+- many tasks can be solved w/o database, larger stack
+
+
+# How About Real Data ?
+
+
+## Data Generating Processes: Logging
+
+- event based files
+- sources: Webservers, IoT devices
+- not aggregated, large amounts of data
+
+**solutions**:
+
+- specific tools: awstats
+- SaaS products
+- programming
+
+<div align="right">
+<img src="images/protokoll.jpeg" style="width: 320px;"/><br />
+<p style="font-size: 10px;">source tagesanzeiger.ch</p>
+</div>
 
 
 
+## Data Generating Processes: tracking
+
+- logging
+- tracking
+- surveys / observation
+- scraping / mining 
+ 
+
+<div align="right">
+<img src="images/spy.png" style="width: 400px;"/><br />
+<p style="font-size: 10px;">source: http://gantalcala.org/</p>
+</div>
+
+
+## Data Generating Processes: surveys
+
+
+
+
+## Data Generating Processes: scraping
+
+
+
+
+
+## Types of datasets: time series
+
+```{r}
+ts2 <- ts(rnorm(20),
+          start = c(1995,1),
+          frequency = 4)
+ts2
+```
+
+examples: monthly revenues over time, stocks, log files
+
+
+## Types of datasets: cross sectional data
 
 
 
