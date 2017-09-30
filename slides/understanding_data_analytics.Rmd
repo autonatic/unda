@@ -162,7 +162,7 @@ fluidPage(sidebarLayout(sidebarPanel(
 <img src="images/busy.png">
 
 
-## The R Language for Statisticsl Computing
+## The R Language for Statistical Computing
 
 - First appeared in 1993 
 - designed by Ihaka and Gentleman
@@ -276,15 +276,26 @@ fluidPage(sidebarLayout(sidebarPanel(
 - scripting language is good start
 - understanding a language helps to remember syntax
 - many tasks can be solved w/o database, larger stack
+- programming makes tasks scalable and transparent
 
 
 # How About Real Data ?
 
+## Data Generating Processes: Simulation
+
+**Why?**
+
+- Form Expectations (Proposals / Grants)
+- Detectability
+- Analyzing complex systems 
+
+study: http://ieeexplore.ieee.org/document/1622367/?reload=true
+
 
 ## Data Generating Processes: Logging
 
-- event based files
 - sources: Webservers, IoT devices
+- event based files
 - not aggregated, large amounts of data
 
 **solutions**:
@@ -302,11 +313,9 @@ fluidPage(sidebarLayout(sidebarPanel(
 
 ## Data Generating Processes: tracking
 
-- logging
-- tracking
-- surveys / observation
-- scraping / mining 
- 
+- user specific logging
+- data similar to log data
+- e-commerce tracking  
 
 <div align="right">
 <img src="images/spy.png" style="width: 400px;"/><br />
@@ -316,13 +325,24 @@ fluidPage(sidebarLayout(sidebarPanel(
 
 ## Data Generating Processes: surveys
 
+- input: online forms, smartphone apps, interviews, paper 
+- result in cross sectional or panel data
 
 
 
-## Data Generating Processes: scraping
+## Data Generating Processes: download, (web) scraping
+
+- web scraping
+- scraping spreadsheets, html tables
+- image processing
+- prices from car vendor
+- text mining
 
 
-
+<div align="right">
+<img src="images/scraping.png" style="width: 400px;"/><br />
+<p style="font-size: 10px;">source: youtub, spaceballs/</p>
+</div>
 
 
 ## Types of datasets: time series
@@ -334,15 +354,35 @@ ts2 <- ts(rnorm(20),
 ts2
 ```
 
-examples: monthly revenues over time, stocks, log files
+examples: monthly revenues over time, stocks, aggregated log files
+
+representation: R objects, spreadsheet (long format) 
 
 
 ## Types of datasets: cross sectional data
 
+```{r}
+head(mtcars)
+```
+
+- multiple variables
+- one period
 
 
+## Types of datasets: panel data
+
+- multiple variables
+- one period
 
 
+## Nested data structures
+
+- hierarchical data
+- Sector classification
+- GDP components
+
+
+## Representations
 
 
 
