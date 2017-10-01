@@ -29,5 +29,39 @@ describe distribution of variables
 1. Is mpg significantly different in 4 or 6 cylinder cars?
 2. Is displacement significantly different in automatic and manual transmission cars?
 
-## An Introduction to linear regression
+=> But what if there's more than two groups? 
+
+
+## An Introduction to Linear Regression: univariate case
+
+```{r}
+fit1 <- lm(mpg ~ wt, data = mtcars)
+summary(fit1)
+```
+
+## An Introduction to Linear Regression: multivariate case
+
+```{r}
+fit2 <- lm(mpg ~ ., data = mtcars)
+summary(fit2)
+```
+
+## Another Example: Car Valuation
+
+- Insurance
+- Used car market
+
+
+## Trends in Data Science
+
+- custom models can be understood by large platforms, e.g. [AzureML](https://studio.azureml.net/)
+- crowd intelligence, e.g. [Kaggle competition](http://www.kaggle.com)
+
+
+
+
+
+
+
+
 
