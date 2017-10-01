@@ -1,0 +1,33 @@
+---
+title: "Understanding Data Analytics II"
+subtitle: "plan, apply and scale"
+author: "Matthias Bannert"
+date: "October 2017"
+output: ioslides_presentation
+widescreen: true
+smaller: true
+---
+
+
+# Statistics and Visualization
+
+
+## Basic descriptive statistics
+
+- mean
+- median
+- distributions of variables
+- quantiles
+- standard deviation, variance
+
+=> help to get an idea about a dataset, 
+describe distribution of variables
+
+
+## Basic Hypothesis Testing: t.test
+
+1. Is mpg significantly different in 4 or 6 cylinder cars?
+2. Is displacement significantly different in automatic and manual transmission cars?
+
+## An Introduction to linear regression
+

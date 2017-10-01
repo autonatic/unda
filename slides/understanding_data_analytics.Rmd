@@ -1,5 +1,5 @@
 ---
-title: "Understanding Data Analytics"
+title: "Understanding Data Analytics I"
 subtitle: "plan, apply and scale"
 author: "Matthias Bannert"
 date: "October 2017"
@@ -286,7 +286,7 @@ fluidPage(sidebarLayout(sidebarPanel(
 **Why?**
 
 - Form Expectations (Proposals / Grants)
-- Detectability
+- Detectability of problems
 - Analyzing complex systems 
 
 study: http://ieeexplore.ieee.org/document/1622367/?reload=true
@@ -410,7 +410,7 @@ l$element2 <- head(mtcars,4)
 l
 ```
 
-examples: meta information, sector classification (hierarchical), GDP components, translations, attributes, properties
+examples: meta information, sector classification (hierarchical), GDP components, translations, attributes, properties, [Geo spatial data](https://github.com/mbannert/maps/blob/master/ch_bfs_regions.geojson)
 
 
 ## Task III: Dataset types
