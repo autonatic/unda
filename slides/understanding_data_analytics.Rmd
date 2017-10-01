@@ -261,7 +261,7 @@ fluidPage(sidebarLayout(sidebarPanel(
 <img src="images/camel.gif" style="width: 400px;"/></div>
 
 
-## Task: Working on a built-in dataset
+## Task I: Working on a built-in dataset
 
 1. How many observations does the dataset mtcars have?
 2. What's the miles-per-gallon average, median?
@@ -276,7 +276,7 @@ fluidPage(sidebarLayout(sidebarPanel(
 - scripting language is good start
 - understanding a language helps to remember syntax
 - many tasks can be solved w/o database, larger stack
-- programming makes tasks scalable and transparent
+- programming makes tasks scalable and reproducible
 
 
 # How About Real Data ?
@@ -315,7 +315,11 @@ study: http://ieeexplore.ieee.org/document/1622367/?reload=true
 
 - user specific logging
 - data similar to log data
-- e-commerce tracking  
+- e-commerce tracking 
+- often received through APIs in software as-a-service (Saas) products
+    - Google Analytics
+    - Google Adwords
+    - Adsense
 
 <div align="right">
 <img src="images/spy.png" style="width: 400px;"/><br />
@@ -328,6 +332,10 @@ study: http://ieeexplore.ieee.org/document/1622367/?reload=true
 - input: online forms, smartphone apps, interviews, paper 
 - result in cross sectional or panel data
 
+<div align="right">
+<img src="images/mic.png" style="height: 400px;"/><br />
+<p style="font-size: 10px;">source: pinterest</p>
+</div>
 
 
 ## Data Generating Processes: download, (web) scraping
@@ -341,8 +349,26 @@ study: http://ieeexplore.ieee.org/document/1622367/?reload=true
 
 <div align="right">
 <img src="images/scraping.png" style="width: 400px;"/><br />
-<p style="font-size: 10px;">source: youtub, spaceballs/</p>
+<p style="font-size: 10px;">source: youtube, spaceballs</p>
 </div>
+
+## A Word on APIs
+
+- REST popular on the web
+- SOAP a bit more old fashioned, but used in B2B often
+- APIs are an easy choices when receiving third party data
+    - can be automatically processes
+    - conflict with security policies
+
+
+## Task II - Discussion: Security
+
+Discuss in smaller groups: 
+
+- Does using scripts to access the web conflict with your department's policies? 
+- What would be a good option to receive 3rd party data?
+- How could 3rd party data be merged with internal data?
+- Where do you stand on cloud computing? 
 
 
 ## Types of datasets: time series
@@ -356,7 +382,6 @@ ts2
 
 examples: monthly revenues over time, stocks, aggregated log files
 
-representation: R objects, spreadsheet (long format) 
 
 
 ## Types of datasets: cross sectional data
@@ -372,17 +397,75 @@ head(mtcars)
 ## Types of datasets: panel data
 
 - multiple variables
-- one period
+- longitudinal data 
+- e.g. German Socio-Economic Panel (GSOEP)
 
 
 ## Nested data structures
 
-- hierarchical data
-- Sector classification
-- GDP components
+```{r}
+l <- list()
+l$element1 <- 2
+l$element2 <- head(mtcars,4)
+l
+```
+
+examples: meta information, sector classification (hierarchical), GDP components, translations, attributes, properties
 
 
-## Representations
+## Task III: Dataset types
+
+Represent each of the following dataset types using R: 
+
+- time series
+- cross section
+- panel
+- a nested structure.
+
+Please suggest an in-memory representation and a file based representation. 
+
+
+## A Short Note On Data Types in R
+
+- character
+- numeric
+- factor (be warned of stringsAsFactor = T)
+- ... 
+
+
+## Data Management
+
+**storage**
+
+- file based
+- database
+    - relational
+    - non-relational
+    - hybrid solutions
+
+**granularity**
+
+- micro data / on-the-fly computation (e.g. OLAP cubes)
+- aggregated data 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
