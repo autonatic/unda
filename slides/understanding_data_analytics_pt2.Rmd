@@ -31,6 +31,13 @@ describe distribution of variables
 
 => But what if there's more than two groups? 
 
+## Time Series Analysis: Seasonal Adjustment
+
+- Trend component
+- Seasonal component
+- noise
+- State of the art: X13-Arima-SEATS (US Census Bureau)
+
 
 ## An Introduction to Linear Regression: univariate case
 

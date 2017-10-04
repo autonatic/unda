@@ -188,6 +188,14 @@ fluidPage(sidebarLayout(sidebarPanel(
 - Community: [stackoverflow](https://stackoverflow.com/questions/tagged/r), Mailinglist, ...
 - R Studio IDE / R Studio Server
 
+## Your R Studio Servers
+
+- Server 1: 35.156.175.91:8787 
+- Server 2: 18.194.127.151:8787
+- user: user1 ... user10
+- password: autonatic
+
+- use Google Chrome or Firefox for best experience, avoid IE
 
 ## The R Studio IDE
 
@@ -201,6 +209,7 @@ fluidPage(sidebarLayout(sidebarPanel(
 - file explorer
 - plot window
 - .Rproj
+
 
 
 ## Basic R Objects
@@ -291,6 +300,20 @@ fluidPage(sidebarLayout(sidebarPanel(
 
 study: http://ieeexplore.ieee.org/document/1622367/?reload=true
 
+## Simulation
+
+```{r}
+# RNG
+rnorm(10,0,1)
+```
+- What do you get?
+- Compare and discuss what happens?
+
+```{r,eval=FALSE}
+set.seed(123)
+rpois(20,5)
+```
+
 
 ## Data Generating Processes: Logging
 
@@ -355,11 +378,19 @@ study: http://ieeexplore.ieee.org/document/1622367/?reload=true
 ## A Word on APIs
 
 - REST popular on the web
-- SOAP a bit more old fashioned, but used in B2B often
+- SOAP a bit more old fashioned, but still
+used in B2B often
 - APIs are an easy choices when receiving third party data
     - can be automatically processes
     - conflict with security policies
 
+## Example Yahoo Finance API
+
+```{r, eval=FALSE}
+library(quantmod)
+getSymbols(c("BMW.DE","AUDVF","VOW.DE"), src = "yahoo")
+```
+- wrapper around web based API calls
 
 ## Task II - Discussion: Security
 
@@ -369,6 +400,8 @@ Discuss in smaller groups:
 - What would be a good option to receive 3rd party data?
 - How could 3rd party data be merged with internal data?
 - Where do you stand on cloud computing? 
+
+# DGPs and Resulting Types of Datasets
 
 
 ## Types of datasets: time series
@@ -442,6 +475,7 @@ Please suggest an in-memory representation and a file based representation.
     - relational
     - non-relational
     - hybrid solutions
+- centralized / decentralized 
 
 **granularity**
 
