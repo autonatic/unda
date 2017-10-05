@@ -1,47 +1,43 @@
-library(splines)
+library(AzureML)
 load("data/renaults.RData")
+
 rpm <- lm(Price ~ Kilometers + Age,
      data = renault)
 
-
-# predict the price for a 1 year old Renault Espace that has driven 50000 KM
-
-# https://www.r-bloggers.com/deploying-a-car-price-model-using-r-and-azureml/
-# https://longhowlam.wordpress.com/2015/08/20/deploying-a-car-price-model-using-r-and-azureml/
-
-undebug(RenaultScorer)
-RenaultScorer(rpm,50000,365)
-
-library(AzureML)
-ws <- workspace(
-  id = "aa62497c09ab40d9bdf4b7b418a1ccf0",
-  auth = "TQtjeIjQnIHAhAagqZ3+83hGUrpKOK1y9Tmo2mfIo+XU7fDnLPuJDGFHKtHcYZFOMYKPWsU8yF8Yb8UdT/3Glw=="
-)
-
-
-RenaultScorer <- function(newdata)
+car_scorer <- function(newdata)
 {
   out <- predict.lm(rpm,newdata)
   out  
 }
 
-
-data.frame("Kilometers" = k,
-           "Age" = a)
-
-rws <- publishWebService(ws,
-  RenaultScorer,"pricing lemons",
-  renault[,c("Price","Kilometers","Age")],
-  data.frame = T
+# generate Azure Workspace object
+ws <- workspace(
+  id = "aa62497c09ab40d9bdf4b7b418a1ccf0",
+  auth = "TQtjeIjQnIHAhAagqZ3+83hGUrpKOK1y9Tmo2mfIo+XU7fDnLPuJDGFHKtHcYZFOMYKPWsU8yF8Yb8UdT/3Glw=="
 )
 
-RenaultPrice <- consume(rws,
-                        data.frame("Price" = 0,
-                          "Kilometers" = 50000,
-                             "Age" = 365,
-                             stringsAsFactors = F))
+# run the model locally
+car_scorer(data.frame("Price" = 0,
+                      "Kilometers" = 50000,
+                      "Age" = 365,
+                      stringsAsFactors = F))
 
+# push the model to Azures Server
+rws <- publishWebService(ws,
+                         car_scorer,
+                         "pricing lemons",
+                         renault[,c("Price",
+                                    "Kilometers","Age")],
+                         data.frame = T)
 
+price <- consume(rws,
+                 data.frame("Price" = 0,
+                            "Kilometers" = 50000,
+                            "Age" = 365,
+                            stringsAsFactors = F))
+
+d <- AzureML::datasets(ws)
+airports <- AzureML::download.datasets(ws,"Airport Codes Dataset")
 
 # AzureML Basic example.
 library(lme4)
@@ -72,5 +68,7 @@ deleteWebService(ws, "sleepy lm")
 # http://www.nealanalytics.com/deploying-r-modelsfunctions-with-the-azureml-r-package/
 
 
+# https://www.r-bloggers.com/deploying-a-car-price-model-using-r-and-azureml/
+# https://longhowlam.wordpress.com/2015/08/20/deploying-a-car-price-model-using-r-and-azureml/
 
 

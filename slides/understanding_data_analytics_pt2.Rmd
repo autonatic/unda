@@ -8,20 +8,100 @@ widescreen: true
 smaller: true
 ---
 
+## Good Morning Links
 
-# Statistics and Visualization
+- http://syberia.io/
+- [Google's 400M bet](https://www.bloomberg.com/news/articles/2017-10-05/google-s-new-phone-shows-how-a-400-million-bet-is-starting-to-pay-off)
+- [Fuel Economy](https://www.r-bloggers.com/rtutor-technological-progress-and-fuel-economy-of-cars/)
+- [Image Processing](https://github.com/kafka399/carCount/)
 
+
+# Warm up: Wrap up & Leftovers
+
+## Data Management: Representing Data
+
+- in memory
+    - vector
+    - matrix
+    - data.frame
+    - list
+- on hard disk 
+    - .RData
+    - .xlsx
+    - .csv
+    - .json
+    - .
+- databases (interface & query language)
+
+## Writing a Custom Function
+
+- function name (left of the arrow)
+- function parameters (inside ())
+- function body (inside {})
+
+```{r, eval=FALSE}
+useless_f <- function(a,b){
+  a+b
+}
+```
+
+## Warm up - Task I : Bulk investigate the built-in datasets
+
+1. use the *data()* function to display all available 
+built-in datasets
+
+2. store the result of a call to *data()* in an object
+
+3. investigate the resulting object with the tools you learned yesterday
+
+4. Write a custom function that provides a nice summary of a dataset, e.g., dimensions.
+
+5. write multiple datasets to disk. write all files in folder called *data*. Use lapply to write multiple files.
+
+## A Few Words On SQL 
+
+- ODBC as general interface
+- RPostgreSQL (needs drivers / client)
+- RMySQL (needs)
+- RSQLite 
+- ... 
+
+=> send queries (see local example) to DB
+
+
+## A short note on SPSS
+
+```{r, eval = FALSE}
+library(foreign)
+(sav <- system.file("files",
+                    "electric.sav",
+                    package = "foreign"))
+dat <- read.spss(file=sav) 
+str(dat)   # list structure with attributes
+
+dat <- read.spss(file=sav, to.data.frame=TRUE) 
+str(dat)   # now a data.frame
+```
+
+# Finally some Statistics !
 
 ## Basic descriptive statistics
 
-- mean
-- median
-- distributions of variables
-- quantiles
-- standard deviation, variance
+```{r,eval=F}
+mean()
+sd()
+summary()
+quantile()
+hist()
+plot(density())
+cor()
+image()
+```
 
-=> help to get an idea about a dataset, 
-describe distribution of variables
+## Why more ?
+
+<img src="images/busy.png">
+
 
 
 ## Basic Hypothesis Testing: t.test
@@ -30,14 +110,6 @@ describe distribution of variables
 2. Is displacement significantly different in automatic and manual transmission cars?
 
 => But what if there's more than two groups? 
-
-## Time Series Analysis: Seasonal Adjustment
-
-- Trend component
-- Seasonal component
-- noise
-- State of the art: X13-Arima-SEATS (US Census Bureau)
-
 
 ## An Introduction to Linear Regression: univariate case
 
@@ -53,18 +125,37 @@ fit2 <- lm(mpg ~ ., data = mtcars)
 summary(fit2)
 ```
 
-## Another Example: Car Valuation
+## The Utopia Example
+
+- DGP is simulated, we know parameters / true model
+- What if we leave out variables
+
+
+## Running an Example on Azure
 
 - Insurance
 - Used car market
 
+## Visualization in R
 
-## Trends in Data Science
+- base plot
+- ggplot2 'Grammar of Graphics'
+- JS libraries (e.g. dygraphs)
+- interactive GUIs (shiny framework)
 
-- custom models can be understood by large platforms, e.g. [AzureML](https://studio.azureml.net/)
-- crowd intelligence, e.g. [Kaggle competition](http://www.kaggle.com)
+## Time Series Analysis: Seasonal Adjustment
+
+- Trend component
+- Seasonal component
+- noise
+- State of the art: X13-Arima-SEATS (US Census Bureau)
 
 
+
+## Misc
+
+- local example: wizRd app
+- deployment: fabric
 
 
 
