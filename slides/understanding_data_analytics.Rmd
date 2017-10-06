@@ -22,46 +22,18 @@ runtime: shiny
 <div align="right">
 <img src="images/mba_profile.png" alt="matthias bannert" style="width: 180px;"/></div>
 
-
-## About this course
-
-**Approach**
-```
-# listen - forget
-# see - remember
-# do - understand
-```
-
-**Goals**
-
-- plan
-- apply
-- scale
-
-
-## Overview
-
-- Day 1: Organize
-	- Introduction
-	- Data Generating Processes
-	- Types of Data
-	- Manage and Archive
-- Day 2: Process and Communicate
-	- Visualization
-	- Methodology
-
 ## Background Poll
 
-<!-- ```{r,echo=FALSE}
+```{r,echo=FALSE}
 library(grid)
 library(shiny)
 source("bullet.R")
 
 fluidPage(sidebarLayout(sidebarPanel(
-  numericInput("members", "Number of participants", 14),
-  numericInput("prog", "Programming", 14),  
-  numericInput("data", "Work With Data", 14),
-  numericInput("rstats", "R Statistical Langauge", 14)
+  numericInput("members", "Number of participants", 8),
+  numericInput("prog", "Programming", 8),  
+  numericInput("data", "Work With Data", 8),
+  numericInput("rstats", "R Statistical Language", 8)
   ),
   mainPanel(
     renderPlot({
@@ -91,7 +63,37 @@ fluidPage(sidebarLayout(sidebarPanel(
   ))
 
 ```
- -->
+
+
+
+## About this course
+
+**Approach**
+```
+# listen - forget
+# see - remember
+# do - understand
+```
+
+**Goals**
+
+- plan
+- apply
+- scale
+
+
+## Overview
+
+- Day 1: Organize
+	- Introduction
+	- Data Generating Processes
+	- Types of Data
+	- Manage and Archive
+- Day 2: Process and Communicate
+	- Visualization
+	- Methodology
+
+
 
 ## Inspiration: Illustrate
 
@@ -112,6 +114,24 @@ fluidPage(sidebarLayout(sidebarPanel(
 
 [You Draw It! (NY Times)](https://www.nytimes.com/interactive/2017/01/15/us/politics/you-draw-obama-legacy.html?mcubz=0)
 
+## When City Bike are faster than cabs
+
+https://www.r-bloggers.com/when-are-citi-bikes-faster-than-taxis-in-new-york-city/
+
+## Microsleep...
+
+[microsleep detection](https://www.researchgate.net/publication/311422254_Detection_of_microsleep_events_in_a_car_driving_simulation_study_using_electrocardiographic_features/fulltext/58455b5308ae61f75dd772cc/311422254_Detection_of_microsleep_events_in_a_car_driving_simulation_study_using_electrocardiographic_features.pdf)
+
+## 10K for the best datasets
+
+https://www.kaggle.com/datasets
+
+## Inspiration: Dynamic Reporting / Presentations
+
+- create report
+- dynamic figures & tables
+- html, pdf, docx 
+
 ## Inspiration: Process Data
 
 - download automatically
@@ -119,11 +139,6 @@ fluidPage(sidebarLayout(sidebarPanel(
 - process 
 - visualize
 
-## Inspiration: Dynamic Reporting / Presentations
-
-- create report
-- dynamic figures & tables
-- html, pdf, docx 
 
 
 ## Data Analytics Toolbox
@@ -149,18 +164,7 @@ fluidPage(sidebarLayout(sidebarPanel(
 
 <p style="font-size: 10px;">Quelle: all Logos taken from their respective companies' website.</p>
 
-## Getting Started
-
-```
-"Premature optimization is the root of all evil."
-
-```
-<div align="right">Donald Knuth</div>
-
-## But ...
-
-<img src="images/busy.png">
-
+<!-- add matlab, mo js libs (free) to the list -->
 
 ## The R Language for Statistical Computing
 
@@ -274,7 +278,7 @@ fluidPage(sidebarLayout(sidebarPanel(
 
 1. How many observations does the dataset mtcars have?
 2. What's the miles-per-gallon average, median?
-3. Which is the most ecological car? 
+3. Which car does consume the least fuel? 
 4. Which is the most ecological car by cylinders?
 5. How is mpg distributed?
 6. Why does solving analytics exercises through programming make sense?
@@ -286,6 +290,15 @@ fluidPage(sidebarLayout(sidebarPanel(
 - understanding a language helps to remember syntax
 - many tasks can be solved w/o database, larger stack
 - programming makes tasks scalable and reproducible
+
+## Getting Started
+
+```
+"Premature optimization is the root of all evil."
+
+```
+<div align="right">Donald Knuth</div>
+
 
 
 # How About Real Data ?

@@ -10,8 +10,8 @@ smaller: true
 
 ## Good Morning Links
 
-- http://syberia.io/
 - [Google's 400M bet](https://www.bloomberg.com/news/articles/2017-10-05/google-s-new-phone-shows-how-a-400-million-bet-is-starting-to-pay-off)
+- http://syberia.io/
 - [Fuel Economy](https://www.r-bloggers.com/rtutor-technological-progress-and-fuel-economy-of-cars/)
 - [Image Processing](https://github.com/kafka399/carCount/)
 
@@ -61,8 +61,8 @@ built-in datasets
 ## A Few Words On SQL 
 
 - ODBC as general interface
-- RPostgreSQL (needs drivers / client)
-- RMySQL (needs)
+- RPostgreSQL (needs native drivers / client)
+- RMySQL (needs native drivers / client)
 - RSQLite 
 - ... 
 
