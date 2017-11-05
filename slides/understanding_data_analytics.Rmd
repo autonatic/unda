@@ -93,7 +93,7 @@ fluidPage(sidebarLayout(sidebarPanel(
 <img src="images/mobile_evolution.png" width="650" alt="mobile evolution">
 
 ## Inspiration: Relation
-
+[Million lines of code](http://www.informationisbeautiful.net/visualizations/million-lines-of-code/)
 <img src="images/million_lines.png" width="650" alt="million lines">
 
 ## Inspiration: Choropleth
@@ -124,14 +124,7 @@ https://www.kaggle.com/datasets
 - create report
 - dynamic figures & tables
 - html, pdf, docx 
-
-## Inspiration: Process Data
-
-- download automatically
-- read spreadsheet
-- process 
-- visualize
-
+- or [dynamically create .pptx reports](http://mran.microsoft.com/web/packages/mschart/vignettes/introduction.html)
 
 
 ## Data Analytics Toolbox
@@ -152,12 +145,13 @@ https://www.kaggle.com/datasets
 <img src="images/tableau.png" width="130">
 <img src="images/pandas.png" width="130">
 <img src="images/aws.png">
+<img src="images/matlab.png" height="80">
 <img src="images/d3.png" height="80">
 <img src="images/postgresql.png" width="150">
 
 <p style="font-size: 10px;">Quelle: all Logos taken from their respective companies' website.</p>
 
-<!-- add matlab, mo js libs (free) to the list -->
+<!-- mo js libs (free) to the list -->
 
 ## The R Language for Statistical Computing
 
@@ -272,7 +266,7 @@ https://www.kaggle.com/datasets
 1. How many observations does the dataset mtcars have?
 2. What's the miles-per-gallon average, median?
 3. Which car does consume the least fuel? 
-4. Which is the most ecological car by cylinders?
+4. Which is the car the least fuel by cylinders?
 5. How is mpg distributed?
 6. Why does solving analytics exercises through programming make sense?
 
