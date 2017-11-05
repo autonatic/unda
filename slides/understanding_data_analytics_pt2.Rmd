@@ -102,6 +102,26 @@ image()
 
 <img src="images/busy.png">
 
+## How a Data Driven Company Uses Data - The Spotify Case
+
+- 'Discover Weekly' (consumption based playlist)
+- activity related music
+- compose Music (currently duet functionality, but ...)
+
+## Or ...
+
+twitter pic microsoft ... freude am fahren
+
+## What could BMW applications be?
+
+- engine / break / car data - detect patterns.
+
+
+
+
+
+
+
 
 
 ## Basic Hypothesis Testing: t.test

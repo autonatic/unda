@@ -2,7 +2,7 @@
 title: "Understanding Data Analytics I"
 subtitle: "plan, apply and scale"
 author: "Matthias Bannert"
-date: "October 2017"
+date: "November 2017"
 output: ioslides_presentation
 widescreen: true
 smaller: true
@@ -30,10 +30,10 @@ library(shiny)
 source("bullet.R")
 
 fluidPage(sidebarLayout(sidebarPanel(
-  numericInput("members", "Number of participants", 8),
-  numericInput("prog", "Programming", 8),  
-  numericInput("data", "Work With Data", 8),
-  numericInput("rstats", "R Statistical Language", 8)
+  numericInput("members", "Number of participants", 10),
+  numericInput("prog", "Programming", 10),  
+  numericInput("data", "Work With Data", 10),
+  numericInput("rstats", "R Statistical Language", 10)
   ),
   mainPanel(
     renderPlot({
@@ -66,20 +66,13 @@ fluidPage(sidebarLayout(sidebarPanel(
 
 
 
-## About this course
+## The Field Formerly Known as Statistics
 
-**Approach**
-```
-# listen - forget
-# see - remember
-# do - understand
-```
+- Numbers / Methods
+- Programming
+- Communication / Visualization
+- Integration / Scaling 
 
-**Goals**
-
-- plan
-- apply
-- scale
 
 
 ## Overview
