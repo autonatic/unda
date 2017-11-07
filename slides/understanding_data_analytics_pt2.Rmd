@@ -302,3 +302,10 @@ summary(fit2)
 - be a 'maker', try to set up an example that's relevant to **you**
 
 
+
+## Other links we discussed (tbc)
+
+- [regular expressions](https://regexr.com/)
+
+
+
