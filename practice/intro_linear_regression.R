@@ -6,7 +6,8 @@ nrow(mtcars)
 fit1 <- lm(mpg ~ disp, data = mtcars)
 
 # expected value of residuals is zero
-fitted.values <- fit1$coefficients[1] + fit1$coefficients[2] * mtcars$disp 
+fitted.values <- fit1$coefficients[1] +
+  fit1$coefficients[2] * mtcars$disp 
 mtcars$mpg - fitted.values 
 fit1$residuals
 hist(fit1$residuals)
@@ -15,21 +16,11 @@ hist(fit1$residuals)
 # variables
 
 
-require(MASS)
+library(MASS)
 set.seed(123)
 m <- mvrnorm(10000, mu = c(20,2.6),
-               Sigma = matrix(c(8,0.85,0.85,.57),
-                              ncol = 2),
-               empirical = TRUE)
-
-# other distributions are bit more realistic 
-# but let's leave it at a multivariate normal...
-# m_i <- pnorm(m)
-# p <- qpois(m_i,20)
-# cor(p[,1],m[,2])
-
-
-
+             Sigma = matrix(c(8,0.85,0.85,.57),ncol = 2),
+             empirical = TRUE)
 disp <- m[,1]
 wt <- m[,2]
 am <- rbinom(10000,1,.4)
@@ -43,6 +34,7 @@ e <- rnorm(10000)
 mpg <- 32 - 0.131 * disp - 1.9 * wt +
   1.8*am - 1.13*cyl + e
 
+
 utopia <- data.frame(mpg,disp,wt,am,cyl)
 
 fit_true <- lm(mpg ~ disp + wt + am +
@@ -53,7 +45,7 @@ summary(fit_true)
 # note that OTHER variables change 
 # their coefficients
 fit_omitted_1 <- lm(mpg ~ disp + wt + 
-                 cyl, data = utopia)
+                      cyl, data = utopia)
 summary(fit_omitted_1)
 
 
