@@ -44,7 +44,11 @@ smaller: true
 
 ## Task II - How About You?
 
-What could a data driven business model for you look like ?
+What could a data driven *business model* for you look like ?
+
+- the traffic case
+- [?](https://blog.insightdatascience.com/crash-catcher-detecting-car-crashes-in-video-9c0522b04558) (use R / Python in prototypes)
+- usage rates / sub cars
 
 # DGPs and Resulting Types of Datasets
 
@@ -157,30 +161,6 @@ examples: meta information, sector classification (hierarchical), GDP components
     - .
 - databases (interface & query language)
 
-## A Few Words On SQL 
-
-- ODBC as general interface
-- RPostgreSQL (needs native drivers / client)
-- RMySQL (needs native drivers / client)
-- RSQLite 
-- ... 
-
-=> send queries (see local example) to DB
-
-
-## A short note on SPSS
-
-```{r, eval = FALSE}
-library(foreign)
-(sav <- system.file("files",
-                    "electric.sav",
-                    package = "foreign"))
-dat <- read.spss(file=sav) 
-str(dat)   # list structure with attributes
-
-dat <- read.spss(file=sav, to.data.frame=TRUE) 
-str(dat)   # now a data.frame
-```
 
 # Finally some Statistics !
 
@@ -220,8 +200,10 @@ image()
 - highcharts examples
 - dygraphs example
 - kmeans shiny app
+- [seasonal website](http://www.seasonal.website/) (an as-goog-as-it-gets shiny app)
+- [shiny gallery](https://shiny.rstudio.com/gallery/)
 
-Life after the seminar pt.I:
+## Life After the Seminar Pt. I
 
 - https://python-graph-gallery.com/
 - http://www.r-graph-gallery.com/
@@ -231,6 +213,48 @@ Life after the seminar pt.I:
 
 - [Pie Charts](https://twitter.com/marinho_thas/status/921501296548630528)
 - Edward Tufte
+- ggplot2 'Grammar of Graphics'
+
+# Interfaces
+
+## R Basics
+
+- R Binaries `load()`, `save()`
+- foreign formats read.xxx, write.xxx
+
+popular packages:
+- jsonlite
+- openxlsx
+- readxl
+- foreign
+
+
+## A Few Words On SQL 
+
+- ODBC as general interface
+- RPostgreSQL (needs native drivers / client)
+- RMySQL (needs native drivers / client)
+- RSQLite 
+- ... 
+
+=> send queries (see local example) to DB
+
+
+## A short note on SPSS
+
+```{r, eval = FALSE}
+library(foreign)
+(sav <- system.file("files",
+                    "electric.sav",
+                    package = "foreign"))
+dat <- read.spss(file=sav) 
+str(dat)   # list structure with attributes
+
+dat <- read.spss(file=sav, to.data.frame=TRUE) 
+str(dat)   # now a data.frame
+```
+
+# Methodology
 
 ## Basic Hypothesis Testing: t.test
 
@@ -258,66 +282,23 @@ summary(fit2)
 - DGP is simulated, we know parameters / true model
 - What if we leave out variables
 
+# Deployment / Integration
 
 ## Running an Example on Azure
 
 - Insurance
 - Used car market
 
-## Visualization in R
+## Life After the Seminar, Pt. II
 
-- base plot
-- ggplot2 'Grammar of Graphics'
-- JS libraries (e.g. dygraphs)
-- interactive GUIs (shiny framework)
-
-## Time Series Analysis: Seasonal Adjustment
-
-- Trend component
-- Seasonal component
-- noise
-- State of the art: X13-Arima-SEATS (US Census Bureau)
-
-
-
-## Misc
-
-- local example: wizRd app
-- deployment: fabric
-
-
-
-
-
-
-
-
-
-## Writing a Custom Function
-
-- function name (left of the arrow)
-- function parameters (inside ())
-- function body (inside {})
-
-```{r, eval=FALSE}
-useless_f <- function(a,b){
-  a+b
-}
-```
-
-## Warm up - Task I : Bulk investigate the built-in datasets
-
-1. use the *data()* function to display all available 
-built-in datasets
-
-2. store the result of a call to *data()* in an object
-
-3. investigate the resulting object with the tools you learned yesterday
-
-4. Write a custom function that provides a nice summary of a dataset, e.g., dimensions.
-
-5. write multiple datasets to disk. write all files in folder called *data*. Use lapply to write multiple files.
-
-
+- find favorite reference manual
+    - R help
+    - [Official R documentation](https://cran.r-project.org/manuals.html)
+    - [stackoverflow questions tagged R info](https://stackoverflow.com/tags/r/info)
+- find favorite dynamic source
+    - [twitter](https://twitter.com/malwaretechblog/status/925825113341050880) (data science community)
+    - [r-bloggers](https://www.r-bloggers.com/)
+- read other people's code, look at package sources
+- be a 'maker', try to set up an example that's relevant to **you**
 
 
