@@ -4,6 +4,9 @@ library(highcharter)
 
 data(economics, package = "ggplot2")
 
+
+
+
 highchart() %>% 
   hc_add_series_times_values(economics$date,
                              economics$psavert, 

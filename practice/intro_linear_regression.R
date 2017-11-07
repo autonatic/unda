@@ -34,7 +34,6 @@ e <- rnorm(10000)
 mpg <- 32 - 0.131 * disp - 1.9 * wt +
   1.8*am - 1.13*cyl + e
 
-
 utopia <- data.frame(mpg,disp,wt,am,cyl)
 
 fit_true <- lm(mpg ~ disp + wt + am +

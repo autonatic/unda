@@ -12,3 +12,5 @@ stocks <- as.xts(data.frame(MSFT = MSFT[, "MSFT.Close"],
 
 library(dygraphs)
 dygraph(stocks[,c(1,3)])
+
+dygraph(stocks)

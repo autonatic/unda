@@ -315,59 +315,6 @@ rpois(20,5)
 ```
 
 
-## Data Generating Processes: Logging
-
-- sources: Webservers, IoT devices
-- event based files
-- not aggregated, large amounts of data
-
-**solutions**:
-
-- specific tools: awstats
-- SaaS products
-- programming
-
-<div align="right">
-<img src="images/protokoll.jpeg" style="width: 320px;"/><br />
-<p style="font-size: 10px;">source tagesanzeiger.ch</p>
-</div>
-
-
-
-## Data Generating Processes: tracking
-
-- user specific logging
-- data similar to log data
-- e-commerce tracking 
-- often received through APIs in software as-a-service (Saas) products
-    - Google Analytics
-    - Google Adwords
-    - Adsense
-
-<div align="right">
-<img src="images/spy.png" style="width: 400px;"/><br />
-<p style="font-size: 10px;">source: http://gantalcala.org/</p>
-</div>
-
-
-## Data Generating Processes: surveys
-
-- input: online forms, smartphone apps, interviews, paper 
-- result in cross sectional or panel data
-
-<div align="right">
-<img src="images/mic.png" style="height: 400px;"/><br />
-<p style="font-size: 10px;">source: pinterest</p>
-</div>
-
-
-## Data Generating Processes: download, (web) scraping
-
-- web scraping
-- scraping spreadsheets, html tables
-- image processing
-- prices from car vendor
-- text mining
 
 
 <div align="right">

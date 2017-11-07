@@ -7,6 +7,9 @@ con <- createConObj(dbhost = "localhost",
                     dbname = "sandbox",
                     passwd = "")
 
+
+
+
 sql <- "SELECT ts_key FROM timeseries.timeseries_main"
 keys <- dbGetQuery(con,sql)$ts_key
 
