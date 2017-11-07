@@ -5,7 +5,7 @@ pageWithSidebar(
     selectInput('ycol', 'Y Variable', names(mtcars),
                 selected=names(mtcars)[[1]]),
     numericInput('clusters', 'Cluster count', 3,
-                 min = 1, max = 9)
+                 min = 1, max = 5)
   ),
   mainPanel(
     plotOutput('plot1')

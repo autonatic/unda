@@ -8,15 +8,139 @@ widescreen: true
 smaller: true
 ---
 
+
+## Overview
+
+- The Spotify Case (What DA is good for...)
+- DGPs, Types of Data - Representing Data
+- Analytical Strategy
+- Visualization (Dygraphs, Highcharts, Shiny)
+- Interfaces
+- Methodology
+- Deployment / Integration (Azure Example)
+- Live after the seminar... 
+
 ## Good Morning Links
 
 - [Google's 400M bet](https://www.bloomberg.com/news/articles/2017-10-05/google-s-new-phone-shows-how-a-400-million-bet-is-starting-to-pay-off)
-- http://syberia.io/
-- [Fuel Economy](https://www.r-bloggers.com/rtutor-technological-progress-and-fuel-economy-of-cars/)
+- https://www.timescale.com/
 - [Image Processing](https://github.com/kafka399/carCount/)
+- [NZZ Artikel: Oft entscheiden Menschen sehr schlecht](https://www.nzz.ch/wirtschaft/oft-entscheiden-menschen-sehr-schlecht-ld.1325428)
+- [Revolution Analytics Blog](http://blog.revolutionanalytics.com/)
+
+## How a Data Driven Company Uses Data - The Spotify Case
 
 
-# Warm up: Wrap up & Leftovers
+## How a Data Driven Company Uses Data - The Spotify Case
+
+- 'Discover Weekly' (consumption based playlist)
+- B2B service for producers
+- activity related music
+- compose Music (currently duet functionality, but ...)
+
+## Earl Conf..
+
+<img src="images/face_recognition.png" height="400">
+
+## Task II - How About You?
+
+What could a data driven business model for you look like ?
+
+# DGPs and Resulting Types of Datasets
+
+## Data Generating Processes: Logging
+
+- sources: Webservers, IoT devices
+- event based files
+- not aggregated, large amounts of data
+
+**solutions**:
+
+- specific tools: awstats
+- SaaS products
+- programming
+
+<div align="right">
+<img src="images/protokoll.jpeg" style="width: 320px;"/><br />
+<p style="font-size: 10px;">source tagesanzeiger.ch</p>
+</div>
+
+## Data Generating Processes: tracking
+
+- user specific logging
+- data similar to log data
+- e-commerce tracking 
+- often received through APIs in software as-a-service (Saas) products
+    - Google Analytics
+    - Google Adwords
+    - Adsense
+
+<div align="right">
+<img src="images/spy.png" style="width: 400px;"/><br />
+<p style="font-size: 10px;">source: http://gantalcala.org/</p>
+</div>
+
+
+## Data Generating Processes: surveys
+
+- input: online forms, smartphone apps, interviews, paper 
+- result in cross sectional or panel data
+
+<div align="right">
+<img src="images/mic.png" style="height: 400px;"/><br />
+<p style="font-size: 10px;">source: pinterest</p>
+</div>
+
+
+## Data Generating Processes: download, (web) scraping
+
+- web scraping
+- scraping spreadsheets, html tables
+- image processing
+- prices from car vendor
+- text mining
+
+
+## Types of datasets: time series
+
+```{r}
+ts2 <- ts(rnorm(20),
+          start = c(1995,1),
+          frequency = 4)
+ts2
+```
+
+examples: monthly revenues over time, stocks, aggregated log files
+
+
+
+## Types of datasets: cross sectional data
+
+```{r}
+head(mtcars)
+```
+
+- multiple variables
+- one period
+
+
+## Types of datasets: panel data
+
+- multiple variables
+- longitudinal data 
+- e.g. German Socio-Economic Panel (GSOEP)
+
+
+## Nested data structures
+
+```{r}
+l <- list()
+l$element1 <- 2
+l$element2 <- head(mtcars,4)
+l
+```
+
+examples: meta information, sector classification (hierarchical), GDP components, translations, attributes, properties, [Geo spatial data](https://github.com/mbannert/maps/blob/master/ch_bfs_regions.geojson)
 
 ## Data Management: Representing Data
 
@@ -32,31 +156,6 @@ smaller: true
     - .json
     - .
 - databases (interface & query language)
-
-## Writing a Custom Function
-
-- function name (left of the arrow)
-- function parameters (inside ())
-- function body (inside {})
-
-```{r, eval=FALSE}
-useless_f <- function(a,b){
-  a+b
-}
-```
-
-## Warm up - Task I : Bulk investigate the built-in datasets
-
-1. use the *data()* function to display all available 
-built-in datasets
-
-2. store the result of a call to *data()* in an object
-
-3. investigate the resulting object with the tools you learned yesterday
-
-4. Write a custom function that provides a nice summary of a dataset, e.g., dimensions.
-
-5. write multiple datasets to disk. write all files in folder called *data*. Use lapply to write multiple files.
 
 ## A Few Words On SQL 
 
@@ -85,7 +184,19 @@ str(dat)   # now a data.frame
 
 # Finally some Statistics !
 
-## Basic descriptive statistics
+## Analytical Strategy
+
+- Validate data, read-in process
+   - e.g., `head(), tail(), str(), View()`
+   - data types correct?
+   - custom patterns
+- Descriptive Statistics
+- Visualization / Distributions
+- Inferential Statistics / Models
+- Scaling / Deployment
+
+
+## Some Useful Functions
 
 ```{r,eval=F}
 mean()
@@ -102,27 +213,24 @@ image()
 
 <img src="images/busy.png">
 
-## How a Data Driven Company Uses Data - The Spotify Case
+# Visualization
 
-- 'Discover Weekly' (consumption based playlist)
-- activity related music
-- compose Music (currently duet functionality, but ...)
+## Examples
 
-## Or ...
+- highcharts examples
+- dygraphs example
+- kmeans shiny app
 
-twitter pic microsoft ... freude am fahren
+Life after the seminar pt.I:
 
-## What could BMW applications be?
+- https://python-graph-gallery.com/
+- http://www.r-graph-gallery.com/
+- https://d3js.org/
+- https://plot.ly/products/dash/
+- https://plot.ly/
 
-- engine / break / car data - detect patterns.
-
-
-
-
-
-
-
-
+- [Pie Charts](https://twitter.com/marinho_thas/status/921501296548630528)
+- Edward Tufte
 
 ## Basic Hypothesis Testing: t.test
 
@@ -179,6 +287,36 @@ summary(fit2)
 
 
 
+
+
+
+
+
+
+## Writing a Custom Function
+
+- function name (left of the arrow)
+- function parameters (inside ())
+- function body (inside {})
+
+```{r, eval=FALSE}
+useless_f <- function(a,b){
+  a+b
+}
+```
+
+## Warm up - Task I : Bulk investigate the built-in datasets
+
+1. use the *data()* function to display all available 
+built-in datasets
+
+2. store the result of a call to *data()* in an object
+
+3. investigate the resulting object with the tools you learned yesterday
+
+4. Write a custom function that provides a nice summary of a dataset, e.g., dimensions.
+
+5. write multiple datasets to disk. write all files in folder called *data*. Use lapply to write multiple files.
 
 
 
