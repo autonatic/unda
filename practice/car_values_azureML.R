@@ -13,7 +13,7 @@ car_scorer <- function(newdata)
 # generate Azure Workspace object
 ws <- workspace(
   id = "aa62497c09ab40d9bdf4b7b418a1ccf0",
-  auth = "TQtjeIjQnIHAhAagqZ3+83hGUrpKOK1y9Tmo2mfIo+XU7fDnLPuJDGFHKtHcYZFOMYKPWsU8yF8Yb8UdT/3Glw=="
+  auth = "eCsf9Gs7wR8N9Vc0ERd2Dg55mhDQsShCX0VbvLB9OBy4Tyd0A7QgR4RS2k9exFGkZtJjFtYu9jweS2ZhetwEnQ=="
 )
 
 # run the model locally

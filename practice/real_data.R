@@ -11,10 +11,9 @@ ts2 <- ts(rnorm(100),
           frequency = 4)
 
 
-# Stock data from an API
-library(quantmod)
 
-getSymbols(c("BMW.DE","AUDVF","VOW.DE"), src = "yahoo")
+
+
 
 ls()
 plot(BMW.DE[,"BMW.DE.Close"])

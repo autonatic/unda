@@ -2,7 +2,7 @@
 title: "Understanding Data Analytics I"
 subtitle: "plan, apply and scale"
 author: "Matthias Bannert"
-date: "October 2017"
+date: "November 2017"
 output: ioslides_presentation
 widescreen: true
 smaller: true
@@ -30,10 +30,10 @@ library(shiny)
 source("bullet.R")
 
 fluidPage(sidebarLayout(sidebarPanel(
-  numericInput("members", "Number of participants", 8),
-  numericInput("prog", "Programming", 8),  
-  numericInput("data", "Work With Data", 8),
-  numericInput("rstats", "R Statistical Language", 8)
+  numericInput("members", "Number of participants", 10),
+  numericInput("prog", "Programming", 10),  
+  numericInput("data", "Work With Data", 10),
+  numericInput("rstats", "R Statistical Language", 10)
   ),
   mainPanel(
     renderPlot({
@@ -66,20 +66,13 @@ fluidPage(sidebarLayout(sidebarPanel(
 
 
 
-## About this course
+## The Field Formerly Known as Statistics
 
-**Approach**
-```
-# listen - forget
-# see - remember
-# do - understand
-```
+- Numbers / Methods
+- Programming
+- Communication / Visualization
+- Integration / Scaling 
 
-**Goals**
-
-- plan
-- apply
-- scale
 
 
 ## Overview
@@ -100,7 +93,7 @@ fluidPage(sidebarLayout(sidebarPanel(
 <img src="images/mobile_evolution.png" width="650" alt="mobile evolution">
 
 ## Inspiration: Relation
-
+[Million lines of code](http://www.informationisbeautiful.net/visualizations/million-lines-of-code/)
 <img src="images/million_lines.png" width="650" alt="million lines">
 
 ## Inspiration: Choropleth
@@ -131,14 +124,7 @@ https://www.kaggle.com/datasets
 - create report
 - dynamic figures & tables
 - html, pdf, docx 
-
-## Inspiration: Process Data
-
-- download automatically
-- read spreadsheet
-- process 
-- visualize
-
+- or [dynamically create .pptx reports](http://mran.microsoft.com/web/packages/mschart/vignettes/introduction.html)
 
 
 ## Data Analytics Toolbox
@@ -159,12 +145,13 @@ https://www.kaggle.com/datasets
 <img src="images/tableau.png" width="130">
 <img src="images/pandas.png" width="130">
 <img src="images/aws.png">
+<img src="images/matlab.png" height="80">
 <img src="images/d3.png" height="80">
 <img src="images/postgresql.png" width="150">
 
 <p style="font-size: 10px;">Quelle: all Logos taken from their respective companies' website.</p>
 
-<!-- add matlab, mo js libs (free) to the list -->
+<!-- mo js libs (free) to the list -->
 
 ## The R Language for Statistical Computing
 
@@ -279,7 +266,7 @@ https://www.kaggle.com/datasets
 1. How many observations does the dataset mtcars have?
 2. What's the miles-per-gallon average, median?
 3. Which car does consume the least fuel? 
-4. Which is the most ecological car by cylinders?
+4. Which is the car the least fuel by cylinders?
 5. How is mpg distributed?
 6. Why does solving analytics exercises through programming make sense?
 
@@ -328,59 +315,6 @@ rpois(20,5)
 ```
 
 
-## Data Generating Processes: Logging
-
-- sources: Webservers, IoT devices
-- event based files
-- not aggregated, large amounts of data
-
-**solutions**:
-
-- specific tools: awstats
-- SaaS products
-- programming
-
-<div align="right">
-<img src="images/protokoll.jpeg" style="width: 320px;"/><br />
-<p style="font-size: 10px;">source tagesanzeiger.ch</p>
-</div>
-
-
-
-## Data Generating Processes: tracking
-
-- user specific logging
-- data similar to log data
-- e-commerce tracking 
-- often received through APIs in software as-a-service (Saas) products
-    - Google Analytics
-    - Google Adwords
-    - Adsense
-
-<div align="right">
-<img src="images/spy.png" style="width: 400px;"/><br />
-<p style="font-size: 10px;">source: http://gantalcala.org/</p>
-</div>
-
-
-## Data Generating Processes: surveys
-
-- input: online forms, smartphone apps, interviews, paper 
-- result in cross sectional or panel data
-
-<div align="right">
-<img src="images/mic.png" style="height: 400px;"/><br />
-<p style="font-size: 10px;">source: pinterest</p>
-</div>
-
-
-## Data Generating Processes: download, (web) scraping
-
-- web scraping
-- scraping spreadsheets, html tables
-- image processing
-- prices from car vendor
-- text mining
 
 
 <div align="right">
